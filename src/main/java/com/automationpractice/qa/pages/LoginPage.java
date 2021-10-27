@@ -53,6 +53,9 @@ public class LoginPage extends TestBase {
     @FindBy(id = "submitAccount")
     WebElement SubmitAccount;
 
+    @FindBy(className="info-account")
+    WebElement SuccessMsgDiv;
+
     // Page Actions
     public void NavigateToRegistrationPage(){
         TestUtil.doClick(SignInBtn);
@@ -106,4 +109,9 @@ public class LoginPage extends TestBase {
         TestUtil.doClick(SubmitAccount);
     }
 
+    public String validateAccountCreation(){
+        String msg = SuccessMsgDiv.getText();
+        System.out.println("--------"+msg+"---------");
+        return msg;
+    }
 }
