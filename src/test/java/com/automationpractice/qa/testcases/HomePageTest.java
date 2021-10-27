@@ -38,6 +38,14 @@ public class HomePageTest extends TestBase {
                 "\t\t\t\t\t");
     }
 
+    @Test(priority = 2)
+    public void VerifySearch(){
+        homePage.SearchProduct();
+        String actualmsg = homePage.GetSearchMsg();
+        //System.out.println("------"+actualmsg+"-------");
+        Assert.assertEquals(actualmsg, "5 results have been found.");
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
