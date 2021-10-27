@@ -56,6 +56,15 @@ public class LoginPage extends TestBase {
     @FindBy(className="info-account")
     WebElement SuccessMsgDiv;
 
+    @FindBy(xpath="//span[contains(text(), 'Home')]")
+    WebElement HomePageBtn;
+
+    @FindBy(id = "email")
+    WebElement Email;
+
+    @FindBy(id = "SubmitLogin")
+    WebElement LoginBtn;
+
     // Page Actions
     public void NavigateToRegistrationPage(){
         TestUtil.doClick(SignInBtn);
@@ -111,7 +120,17 @@ public class LoginPage extends TestBase {
 
     public String validateAccountCreation(){
         String msg = SuccessMsgDiv.getText();
-        System.out.println("--------"+msg+"---------");
+        //System.out.println("--------"+msg+"---------");
         return msg;
+    }
+
+    public HomePage login(){
+
+        Email.sendKeys(prop.getProperty("emailaddress"));
+        Password.sendKeys(prop.getProperty("password"));
+        LoginBtn.click();
+        HomePageBtn.click();
+
+        return new HomePage();
     }
 }
