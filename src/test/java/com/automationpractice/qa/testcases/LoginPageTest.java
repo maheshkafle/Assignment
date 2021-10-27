@@ -26,7 +26,7 @@ public class LoginPageTest extends TestBase {
     }
 
     @Test(priority = 1)
-    public void VerifyUserLogin() throws InterruptedException {
+    public void VerifyUserRegistration() throws InterruptedException {
         loginPage.NavigateToRegistrationPage();
         loginPage.EnterEmailAddress();
         loginPage.ClickOnCreateAccountBtn();
@@ -44,8 +44,15 @@ public class LoginPageTest extends TestBase {
         Assert.assertEquals(expectedmsg,prop.getProperty("actualmsg"));
     }
 
+    @Test(priority = 2)
+    public void VerifyLogin() {
+        loginPage.NavigateToRegistrationPage();
+        homePage = loginPage.login();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
     }
+
 }
