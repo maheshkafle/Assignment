@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="OrangeHRM Test Suite">
+<suite name="AutomationPractice Test Suite">
 
-    <test name="OrangeHRM My Info Regression Test">
+    <test name="AutomationPractice Sanity Test">
         <classes>
             <class name="com.automationpractice.qa.testcases.LoginPageTest"></class>
             <class name="com.automationpractice.qa.testcases.HomePageTest"></class>
