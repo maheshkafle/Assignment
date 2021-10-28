@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OrangeHRM Test Suite">
+
+    <test name="OrangeHRM My Info Regression Test">
+        <classes>
+            <class name="com.automationpractice.qa.testcases.LoginPageTest"></class>
+            <class name="com.automationpractice.qa.testcases.HomePageTest"></class>
+        </classes>
+    </test>
+</suite>
