@@ -46,6 +46,14 @@ public class HomePageTest extends TestBase {
         Assert.assertEquals(actualmsg, "5 results have been found.");
     }
 
+    @Test(priority = 2)
+    public void VerifyClickSocialMediaLink(){
+        homePage.ClickFacebookLink();
+        homePage.ClickTwitterLink();
+        homePage.ClickYoutubeLink();
+        homePage.ClickGooglePlusLink();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
